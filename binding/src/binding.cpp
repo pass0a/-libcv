@@ -24,6 +24,9 @@ void onConnectChange(char* evname,int code) {
     });
 }
 int libcvInit(pa_context *ctx) {
+    if (gp.is_buffer_data(ctx, 0) && gp.is_buffer_data(ctx, 1) && gp.is_buffer_data(ctx, 2) && gp.is_number(ctx, 3)) {
+        
+    }
     xt::xarray<double> arr1
     { { 1.0, 2.0, 3.0 },
     { 2.0, 5.0, 6.0 },
